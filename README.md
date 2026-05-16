@@ -2,7 +2,7 @@
 
 Un générateur professionnel de structure Node.js + Express + EJS avec authentification, SQLite, CLI Creator, support multilingue et Socket.IO.
 
-Développé par :contentReference[oaicite:0]{index=0}
+Développé par :ISAAC KUAKUA MATALATALA
 
 ---
 
