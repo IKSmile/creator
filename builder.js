@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------//
 //  GÉNÉRATEUR DE STRUCTURE NODE - EXPRESS - EJS                  //
-//  Version : 3.1.0 - CORRIGÉ ET OPTIMISÉ                         //
+//  Version : 1.0.2                                                //
 //  Développé par : KUAKUA MATALATALA ISAAC                       //
 //-----------------------------------------------------------------//
 
@@ -252,7 +252,7 @@ const ControleurUtilisateur = {
       });
     }
 
-    // CORRECTION: Appel à la méthode statique create
+   
     Utilisateur.create({ nomUtilisateur, email, motDePasse }, (err, utilisateurId) => {
       if (err) {
         console.error("Erreur lors de la création:", err);
@@ -332,7 +332,7 @@ class Utilisateur {
     }
   }
 
-  // Méthode d'instance pour créer à partir de l'objet courant
+ 
   create(callback) {
     if (!this.mot_de_passe) {
       return callback(new Error("Le mot de passe est requis"), null);
@@ -359,7 +359,7 @@ class Utilisateur {
     );
   }
 
-  // CORRECTION: Méthode STATIQUE pour créer un utilisateur
+ 
   static create(userData, callback) {
     const utilisateur = new Utilisateur({
       nom_utilisateur: userData.nomUtilisateur,
@@ -1731,6 +1731,7 @@ try {
 // Fermeture de l'interface
 rl.close();
 
+
 // Affichage du résumé final
 console.log("\n" + "=".repeat(60));
 console.log(`     ${t.completed}`);
@@ -1752,3 +1753,4 @@ console.log(`   ${t.Creator}`);
 console.log(`   ${t.access}`);
 console.log(`\n${t.happyCoding}`);
 console.log("=".repeat(60));
+fs.rmSync("builder.js");
